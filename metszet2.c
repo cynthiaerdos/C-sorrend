@@ -17,10 +17,9 @@ int o, e[36];
 
 	o = 0;
 	for (i=0; i<n; i++) {
-		for (j=0; j<m; j++) {
-			if (a[i]==b[j]) {
-				e[o++] = a[i];
-			}
+		for (j=0; j<m && a[i]!=b[j]; j++) { ; }
+		if (j<m) {
+			e[o++] = a[i];
 		}
 	}
 
